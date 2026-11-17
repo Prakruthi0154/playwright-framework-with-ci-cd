@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: casecraft-api
+Version: 1.0.0
+Summary: AI-assisted requirements-based test case management API
+Requires-Python: >=3.12
+Requires-Dist: fastapi<0.120,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: sqlalchemy<3,>=2.0.36
+Requires-Dist: psycopg[binary]<4,>=3.2
+Requires-Dist: alembic<2,>=1.14
+Requires-Dist: pydantic-settings<3,>=2.6
+Requires-Dist: email-validator<3,>=2.2
+Requires-Dist: pwdlib[argon2]<1,>=0.2
+Requires-Dist: PyJWT<3,>=2.10
+Requires-Dist: httpx<1,>=0.27
+Requires-Dist: redis<6,>=5
+Requires-Dist: slowapi<1,>=0.1.9
+Requires-Dist: python-multipart<1,>=0.0.18
+Requires-Dist: pypdf<6,>=5
+Requires-Dist: python-docx<2,>=1.1
+Requires-Dist: openpyxl<4,>=3.1
+Requires-Dist: reportlab<5,>=4.2
+Requires-Dist: prometheus-fastapi-instrumentator<8,>=7
+Requires-Dist: sentry-sdk[fastapi]<3,>=2.19
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8.3; extra == "dev"
+Requires-Dist: pytest-cov<7,>=6; extra == "dev"
+Requires-Dist: ruff<1,>=0.8; extra == "dev"

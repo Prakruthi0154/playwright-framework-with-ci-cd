@@ -1,0 +1,9 @@
+[run]
+source = app.application
+branch = True
+omit =
+    app/application/__init__.py
+
+[report]
+fail_under = 80
+show_missing = True

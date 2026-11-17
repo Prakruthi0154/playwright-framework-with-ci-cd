@@ -1,0 +1,15 @@
+requirement_key,title,description,acceptance_criteria
+AUTH-101,Account sign-in,"A registered user can sign in with a valid email and password.","Valid credentials start an authenticated session; invalid credentials show a generic error."
+AUTH-102,Password reset,"A user can request a password reset for their account.","A reset link is sent without revealing whether an email address is registered."
+*** Add File: .gitignore
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+backend/*.db

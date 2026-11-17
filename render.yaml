@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: casecraft-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    preDeployCommand: alembic upgrade head
+    healthCheckPath: /health/ready
+    autoDeploy: false
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: COOKIE_SAMESITE
+        value: none
+      - key: FRONTEND_ORIGINS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: SENTRY_DSN
+        sync: false
