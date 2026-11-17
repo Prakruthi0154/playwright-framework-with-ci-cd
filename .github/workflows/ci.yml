@@ -24,7 +24,7 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: ruff check .
       - run: pytest --cov=app.application --cov-report=term-missing --cov-fail-under=80
-      - uses: aquasecurity/trivy-action@0.28.0
+      - uses: aquasecurity/trivy-action@0.29.0
         with:
           scan-type: fs
           scan-ref: backend
